@@ -1,5 +1,5 @@
+import 'package:aplikasi_smarthome_lumihome/Autentification/Auth.dart';
 import 'package:aplikasi_smarthome_lumihome/Splash/splash_screen.dart';
-import 'package:aplikasi_smarthome_lumihome/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       ),
       home: SplashScreen(),
       routes: {
-        '/login': (context) => LoginPage(),
+        '/Auth': (context) => Auth(),
       },
     );
   }
