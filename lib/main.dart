@@ -1,5 +1,5 @@
+import 'package:aplikasi_smarthome_lumihome/Splash/splash_screen.dart';
 import 'package:aplikasi_smarthome_lumihome/login.dart';
-import 'package:aplikasi_smarthome_lumihome/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
