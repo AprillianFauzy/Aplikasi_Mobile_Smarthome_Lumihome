@@ -1,3 +1,4 @@
+import 'package:aplikasi_smarthome_lumihome/Components/Button.dart';
 import 'package:flutter/material.dart';
 
 class Auth extends StatefulWidget {
@@ -37,23 +38,11 @@ class _AuthState extends State<Auth> {
 
             Column(
               children: [
-                ElevatedButton(
-                  onPressed: () {
-                    print("Tombol ditekan!");
+                MyButton(
+                  onTap: () {
+                    print("Sign Up");
                   },
-                  child: Text(
-                    "Sign Up",
-                    style: TextStyle(
-                      color: Color(0xffffffff),
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                      primary: Color(0xff619EF5),
-                      fixedSize: Size(254, 45),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0))),
+                  text: 'Sign Up',
                 ),
               ],
             ),
