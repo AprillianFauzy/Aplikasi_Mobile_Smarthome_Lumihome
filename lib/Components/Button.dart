@@ -1,51 +1,68 @@
 import 'package:flutter/material.dart';
 
-enum ButtonType { primary, secondary, disabled }
+enum ButtonType { primary, secondary }
 
 class MyButton extends StatelessWidget {
   const MyButton({
     super.key,
-    required this.onTap,
-    this.textColor = const Color(0xffffffff),
-    this.bgColor = const Color(0xff619EF5),
+    this.height,
+    this.width,
     required this.text,
-    this.height = 45.0,
-    this.width = 254.0,
-    this.borderRadius = 10.0,
+    required this.onTap,
     this.type = ButtonType.primary,
   });
 
-  final VoidCallback onTap;
+  final double? width;
+  final double? height;
   final String text;
-  final Color textColor;
-  final double width;
-  final double height;
-  final double borderRadius;
-  final Color bgColor;
+  final VoidCallback onTap;
   final ButtonType type;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: width,
-      height: height,
-      child: ElevatedButton(
-        onPressed: onTap,
-        child: Text(
-          text,
-          style: TextStyle(
-            color: textColor,
-            fontSize: 15,
-            fontWeight: FontWeight.bold,
+    switch (type) {
+      // untuk Default Button
+      case ButtonType.primary:
+        return SizedBox(
+          width: width ?? 255,
+          height: height ?? 45,
+          child: ElevatedButton(
+            onPressed: onTap,
+            child: Text(
+              text,
+              style: TextStyle(
+                color: Color(0xffffffff),
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            style: ElevatedButton.styleFrom(
+                primary: Color(0xff619EF5),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10))),
           ),
-        ),
-        style: ElevatedButton.styleFrom(
-          primary: bgColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(borderRadius),
+        );
+      // untuk Secondary Button
+      case ButtonType.secondary:
+        return SizedBox(
+          width: width ?? 255,
+          height: height ?? 45,
+          child: ElevatedButton(
+            onPressed: onTap,
+            child: Text(
+              text,
+              style: TextStyle(
+                color: Color(0xffffffff),
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            style: ElevatedButton.styleFrom(
+                onPrimary: Color(0xff619EF5),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10))),
           ),
-        ),
-      ),
-    );
+        );
+    }
   }
 }
