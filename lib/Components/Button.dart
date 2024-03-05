@@ -49,18 +49,22 @@ class MyButton extends StatelessWidget {
           height: height ?? 45,
           child: ElevatedButton(
             onPressed: onTap,
+            style: ElevatedButton.styleFrom(
+                onPrimary: Color(0xff619EF5),
+                side: const BorderSide(
+                  color: Color(0xff619EF5),
+                  width: 3,
+                ),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10))),
             child: Text(
               text,
-              style: TextStyle(
-                color: Color(0xffffffff),
+              style: const TextStyle(
+                color: Color(0xff619EF5),
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            style: ElevatedButton.styleFrom(
-                onPrimary: Color(0xff619EF5),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10))),
           ),
         );
     }

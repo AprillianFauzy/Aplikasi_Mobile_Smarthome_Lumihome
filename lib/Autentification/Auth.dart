@@ -105,7 +105,11 @@ class _AuthState extends State<Auth> {
                       height: 15,
                     ),
                     // Button Sign In
-                    MyButton(text: "Sign In", onTap: () {})
+                    MyButton(
+                      text: "Sign In",
+                      onTap: () {},
+                      type: ButtonType.secondary,
+                    )
                   ],
                 )
               ],
