@@ -34,10 +34,11 @@ class _AuthState extends State<Auth> {
                 const Text(
                   "Illuminate Your Life with Smart Living !",
                   style: TextStyle(
-                      decoration: TextDecoration.none,
-                      fontSize: 14,
-                      color: Color(0xff619EF5),
-                      fontWeight: FontWeight.bold),
+                    decoration: TextDecoration.none,
+                    fontSize: 14.0,
+                    color: Color(0xff619EF5),
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 const SizedBox(
                   height: 80,
@@ -54,19 +55,20 @@ class _AuthState extends State<Auth> {
                           isScrollControlled: true,
                           builder: (BuildContext context) {
                             return const SizedBox(
-                                width: double.infinity,
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    SizedBox(
-                                      height: 600,
-                                    ),
-                                    Text(
-                                      "jasbfbasifbiasbifbasibfiua adasidi asd asd aioshdo iajspdj asjdajspfj poajsp ofjaspfjpasjpfoajspfhais oafjpasfpajssb",
-                                      style: TextStyle(fontSize: 20),
-                                    ),
-                                  ],
-                                ));
+                              width: double.infinity,
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  SizedBox(
+                                    height: 600,
+                                  ),
+                                  Text(
+                                    "jasbfbasifbiasbifbasibfiua adasidi asd asd aioshdo iajspdj asjdajspfj poajsp ofjaspfjpasjpfoajspfhais oafjpasfpajssb",
+                                    style: TextStyle(fontSize: 20),
+                                  ),
+                                ],
+                              ),
+                            );
                           },
                         );
                       },
@@ -89,7 +91,9 @@ class _AuthState extends State<Auth> {
                             child: Text(
                               "Or",
                               style: TextStyle(
-                                  fontSize: 16.0, color: Color(0xff000000)),
+                                  fontSize: 16.0,
+                                  color: Color(0xff000000),
+                                  fontWeight: FontWeight.bold),
                             ),
                           ),
                           Expanded(
