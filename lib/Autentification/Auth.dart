@@ -1,3 +1,5 @@
+import 'package:aplikasi_smarthome_lumihome/Autentification/SignUp.dart';
+import 'package:aplikasi_smarthome_lumihome/Autentification/login.dart';
 import 'package:aplikasi_smarthome_lumihome/Components/Button.dart';
 import 'package:flutter/material.dart';
 
@@ -34,11 +36,11 @@ class _AuthState extends State<Auth> {
                 const Text(
                   "Illuminate Your Life with Smart Living !",
                   style: TextStyle(
-                    decoration: TextDecoration.none,
-                    fontSize: 14.0,
-                    color: Color(0xff619EF5),
-                    fontWeight: FontWeight.bold,
-                  ),
+                      decoration: TextDecoration.none,
+                      fontSize: 15.0,
+                      color: Color(0xff619EF5),
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w700),
                 ),
                 const SizedBox(
                   height: 80,
@@ -51,28 +53,30 @@ class _AuthState extends State<Auth> {
                       text: "Sign Up",
                       onTap: () {
                         showModalBottomSheet(
+                          backgroundColor: Color(0xff619EF5),
                           context: context,
-                          isScrollControlled: true,
+                          isScrollControlled:
+                              true, // Ensure scrolling if needed
                           builder: (BuildContext context) {
-                            return const SizedBox(
-                              width: double.infinity,
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  SizedBox(
-                                    height: 600,
-                                  ),
-                                  Text(
-                                    "jasbfbasifbiasbifbasibfiua adasidi asd asd aioshdo iajspdj asjdajspfj poajsp ofjaspfjpasjpfoajspfhais oafjpasfpajssb",
-                                    style: TextStyle(fontSize: 20),
-                                  ),
-                                ],
+                            return SingleChildScrollView(
+                              // Allow scrolling when keyboard appears
+                              child: Padding(
+                                // Add padding for bottom safety
+                                padding: EdgeInsets.only(
+                                    bottom: MediaQuery.of(context)
+                                        .viewInsets
+                                        .bottom),
+                                child: Column(
+                                  children: [SignUpPage()],
+                                ),
                               ),
                             );
                           },
+                          // Disable resize to avoid unwanted content adjustments
                         );
                       },
                     ),
+
                     const SizedBox(
                       height: 15,
                     ),
@@ -111,11 +115,34 @@ class _AuthState extends State<Auth> {
                     // Button Sign In
                     MyButton(
                       text: "Sign In",
-                      onTap: () {},
+                      onTap: () {
+                        showModalBottomSheet(
+                          backgroundColor: Color(0xff619EF5),
+                          context: context,
+                          isScrollControlled:
+                              true, // Ensure scrolling if needed
+                          builder: (BuildContext context) {
+                            return SingleChildScrollView(
+                              // Allow scrolling when keyboard appears
+                              child: Padding(
+                                // Add padding for bottom safety
+                                padding: EdgeInsets.only(
+                                    bottom: MediaQuery.of(context)
+                                        .viewInsets
+                                        .bottom),
+                                child: Column(
+                                  children: [LoginPage()],
+                                ),
+                              ),
+                            );
+                          },
+                          // Disable resize to avoid unwanted content adjustments
+                        );
+                      },
                       type: ButtonType.secondary,
-                    )
+                    ),
                   ],
-                )
+                ),
               ],
             ),
           ),

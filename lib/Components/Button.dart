@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum ButtonType { primary, secondary }
+enum ButtonType { primary, secondary, icon }
 
 class MyButton extends StatelessWidget {
   const MyButton({
@@ -10,6 +10,9 @@ class MyButton extends StatelessWidget {
     required this.text,
     required this.onTap,
     this.type = ButtonType.primary,
+    this.bgColor,
+    this.textColor,
+    this.image = '',
   });
 
   final double? width;
@@ -17,6 +20,9 @@ class MyButton extends StatelessWidget {
   final String text;
   final VoidCallback onTap;
   final ButtonType type;
+  final Color? bgColor;
+  final Color? textColor;
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -28,18 +34,19 @@ class MyButton extends StatelessWidget {
           height: height ?? 45,
           child: ElevatedButton(
             onPressed: onTap,
+            style: ElevatedButton.styleFrom(
+                primary: bgColor ?? Color(0xff619EF5),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10))),
             child: Text(
               text,
               style: TextStyle(
-                color: Color(0xffffffff),
+                color: textColor ?? Color(0xffffffff),
                 fontSize: 16,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w700,
+                fontFamily: 'Poppins',
               ),
             ),
-            style: ElevatedButton.styleFrom(
-                primary: Color(0xff619EF5),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10))),
           ),
         );
       // untuk Secondary Button
@@ -62,10 +69,48 @@ class MyButton extends StatelessWidget {
               style: const TextStyle(
                 color: Color(0xff619EF5),
                 fontSize: 16,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w700,
+                fontFamily: 'Poppins',
               ),
             ),
           ),
+        );
+      case ButtonType.icon:
+        return SizedBox(
+          width: width ?? 255,
+          height: height ?? 45,
+          child: ElevatedButton(
+              onPressed: onTap,
+              style: ElevatedButton.styleFrom(
+                  onPrimary: Color(0xff619EF5),
+                  side: const BorderSide(
+                    color: Color(0xff619EF5),
+                    width: 3,
+                  ),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10))),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    image,
+                    width: 25,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    text,
+                    style: const TextStyle(
+                      color: Color(0xff619EF5),
+                      fontSize: 15,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ],
+              )),
         );
     }
   }
