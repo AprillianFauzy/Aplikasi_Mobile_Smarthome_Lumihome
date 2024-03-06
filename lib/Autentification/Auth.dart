@@ -97,7 +97,8 @@ class _AuthState extends State<Auth> {
                               style: TextStyle(
                                   fontSize: 16.0,
                                   color: Color(0xff000000),
-                                  fontWeight: FontWeight.bold),
+                                  fontWeight: FontWeight.w700,
+                                  fontFamily: 'Poppins'),
                             ),
                           ),
                           Expanded(

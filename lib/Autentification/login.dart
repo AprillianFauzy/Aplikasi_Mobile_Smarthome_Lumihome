@@ -72,8 +72,10 @@ class _LoginPageState extends State<LoginPage> {
             height: 50,
           ),
           MyButton(
-            text: "Sign Up",
-            onTap: () {},
+            text: "Sign In",
+            onTap: () {
+              Navigator.pushNamed(context, '/Dashboard');
+            },
             type: ButtonType.primary,
             bgColor: Colors.white,
             textColor: Color(0xff619EF5),
