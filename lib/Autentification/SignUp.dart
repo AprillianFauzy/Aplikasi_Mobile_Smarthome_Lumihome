@@ -107,17 +107,17 @@ class _SignUpPageState extends State<SignUpPage> {
               MyPassword(label: "Password"),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           MyButton(
-            text: "Sign In",
+            text: "Sign Up",
             onTap: () {},
             type: ButtonType.primary,
             bgColor: Colors.white,
             textColor: Color(0xff619EF5),
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
         ],

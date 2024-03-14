@@ -61,6 +61,8 @@ flutter:
         - images/logo.png
         - images/google.png
         - images/setting.png
+        - images/Door.png
+        - images/lamp.png
 
     #   - images/a_dot_ham.jpeg
 
