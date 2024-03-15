@@ -1,5 +1,6 @@
 import 'package:aplikasi_smarthome_lumihome/Autentification/Auth.dart';
 import 'package:aplikasi_smarthome_lumihome/Dashboard/Dashboard.dart';
+import 'package:aplikasi_smarthome_lumihome/Dashboard/test.dart';
 import 'package:aplikasi_smarthome_lumihome/Splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/Auth': (context) => Auth(),
         '/Dashboard': (context) => DashboardPage(),
+        '/Test': (context) => Mytest(),
       },
     );
   }
