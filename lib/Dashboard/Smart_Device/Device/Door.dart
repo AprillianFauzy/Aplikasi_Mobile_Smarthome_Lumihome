@@ -12,10 +12,7 @@ class _DoorState extends State<Door> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.only(
-        left: 28,
-        right: 28,
-      ),
+      padding: EdgeInsets.symmetric(horizontal: 28),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20.0),
         child: Container(

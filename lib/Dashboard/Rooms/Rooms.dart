@@ -1,14 +1,14 @@
-import 'package:aplikasi_smarthome_lumihome/Dashboard/Smart_Device/Smartdevice.dart';
+import 'package:aplikasi_smarthome_lumihome/Dashboard/Rooms/Room/Room.dart';
 import 'package:flutter/material.dart';
 
-class DashboardPage extends StatefulWidget {
-  const DashboardPage({super.key});
+class Roomspage extends StatefulWidget {
+  const Roomspage({super.key});
 
   @override
-  State<DashboardPage> createState() => _DashboardPageState();
+  State<Roomspage> createState() => _RoomspageState();
 }
 
-class _DashboardPageState extends State<DashboardPage> {
+class _RoomspageState extends State<Roomspage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -78,7 +78,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   child: Container(
                     width: double.infinity,
                     color: Colors.white,
-                    child: Smartdevice(),
+                    child: RoomPage(),
                   ),
                 ),
               ),
@@ -87,9 +87,14 @@ class _DashboardPageState extends State<DashboardPage> {
                 right: 0.0,
                 child: Container(
                   padding: EdgeInsets.only(bottom: 10),
-                  child: Image.asset(
-                    'images/logo.png',
-                    height: 45,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Image.asset(
+                      'images/logo.png',
+                      height: 45,
+                    ),
                   ),
                 ),
               ),

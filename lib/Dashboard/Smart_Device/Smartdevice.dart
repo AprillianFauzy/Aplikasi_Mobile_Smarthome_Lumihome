@@ -1,6 +1,6 @@
+import 'package:aplikasi_smarthome_lumihome/Dashboard/Rooms/Rooms.dart';
 import 'package:aplikasi_smarthome_lumihome/Dashboard/Smart_Device/Device/Door.dart';
 import 'package:aplikasi_smarthome_lumihome/Dashboard/Smart_Device/Device/Light.dart';
-import 'package:aplikasi_smarthome_lumihome/Dashboard/test.dart';
 import 'package:flutter/material.dart';
 
 class Smartdevice extends StatefulWidget {
@@ -39,7 +39,7 @@ class _SmartdeviceState extends State<Smartdevice> {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Mytest()),
+              MaterialPageRoute(builder: (context) => Roomspage()),
             );
           },
           child: Lights(),
@@ -51,7 +51,7 @@ class _SmartdeviceState extends State<Smartdevice> {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Mytest()),
+              MaterialPageRoute(builder: (context) => Roomspage()),
             );
           },
           child: Door(),
