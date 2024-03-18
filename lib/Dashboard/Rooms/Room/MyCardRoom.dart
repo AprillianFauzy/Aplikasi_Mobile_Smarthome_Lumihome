@@ -30,7 +30,7 @@ class MyCardRoom extends StatelessWidget {
                 children: [
                   Image.asset(
                     image,
-                    width: 50,
+                    height: 60,
                   ),
                   const SizedBox(
                     height: 5,

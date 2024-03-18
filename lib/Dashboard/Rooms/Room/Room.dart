@@ -14,7 +14,7 @@ class _RoomPageState extends State<RoomPage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start, // Kiri-rata
       children: [
-        SizedBox(
+        const SizedBox(
           height: 25.0, // Jarak atas 25 piksel
         ),
         Container(
@@ -29,7 +29,7 @@ class _RoomPageState extends State<RoomPage> {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20.0, // Jarak antara judul dan konten 20 piksel
         ),
         Container(
@@ -43,14 +43,14 @@ class _RoomPageState extends State<RoomPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   MyCardRoom(
-                    image: 'images/lamp.png',
+                    image: 'images/tv.png',
                     room: 'Living Room',
                   ),
                   SizedBox(
                     width: 50.0, // Jarak antar kartu 50 piksel
                   ),
                   MyCardRoom(
-                    image: 'images/lamp.png',
+                    image: 'images/bed.png',
                     room: 'Bedroom',
                   ),
                 ],
@@ -63,14 +63,14 @@ class _RoomPageState extends State<RoomPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   MyCardRoom(
-                    image: 'images/lamp.png',
+                    image: 'images/Kitchen.png',
                     room: 'Kamar',
                   ),
                   SizedBox(
                     width: 50.0, // Jarak antar kartu 50 piksel
                   ),
                   MyCardRoom(
-                    image: 'images/lamp.png',
+                    image: 'images/bath.png',
                     room: 'Kamar',
                   ),
                 ],

@@ -63,6 +63,10 @@ flutter:
         - images/setting.png
         - images/Door.png
         - images/lamp.png
+        - images/bath.png
+        - images/bed.png
+        - images/Kitchen.png
+        - images/tv.png
 
     #   - images/a_dot_ham.jpeg
 
