@@ -13,6 +13,10 @@ class MyCardRoom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        // Tambahkan aksi ketika kartu disentuh (misalnya, ubah status)
+        print('Kartu ruangan $room disentuh!');
+      },
       child: ClipRRect(
         borderRadius: BorderRadius.circular(13.0),
         child: Container(
@@ -28,7 +32,7 @@ class MyCardRoom extends StatelessWidget {
                     image,
                     width: 50,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   Text(
@@ -39,7 +43,7 @@ class MyCardRoom extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                         color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   Text(
